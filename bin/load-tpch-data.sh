@@ -116,7 +116,7 @@ echo "DB: ${DB}"
 
 function run_sql() {
     echo "$*"
-    mysql -h"${HOST}" -u"${USER}" -P"${PORT}" -D"${DB}" -e "$*"
+    mysql -h"${HOST}" -u"${USER}" -P"${PORT}" -D"${DB}" -e "$*" --local-infile
 }
 
 # start load
